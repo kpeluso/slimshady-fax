@@ -1,0 +1,32 @@
+#bodies-list {
+  margin-top: 2*$space;
+  height: 32rem;
+  overflow: scroll;
+}
+
+.list-row {
+  width: 100%;
+  margin-bottom: $space/2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-row__message {
+  text-align: left;
+}
+
+.list-row__message--header {
+  font-weight: bold;
+}
+
+.list-row--view {
+  width: 100%;
+  margin-bottom: $space/2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: $space/2;
+  grid-auto-rows: minmax(100px, auto);
+  border: 2px solid black;
+  line-height: 10rem;
+}
+

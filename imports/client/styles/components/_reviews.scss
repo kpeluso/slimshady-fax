@@ -1,0 +1,14 @@
+.review {
+  font-style: italic;
+  margin: 2*$space 0;
+}
+
+.review-rank {
+  text-align: center;
+}
+
+.review-note {
+  transform: translateY(4rem);
+  line-height: 1.6rem;
+}
+

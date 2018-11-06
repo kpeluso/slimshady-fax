@@ -1,0 +1,95 @@
+.boxed-view {
+  align-items: center;
+  background: $boxed-view-overlay-bg;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+}
+
+.boxed-view--modal {
+  background: fade-out($boxed-view-overlay-bg, 0.3);
+  position: fixed; // fixed relative to browser viewport
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.boxed-view__box {
+  background-color: $boxed-view-bg;
+  margin-bottom: $space;
+  padding: 2.4rem;
+  text-align: center;
+  width: 28rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+.boxed-view__box--modal {
+  width: 36rem;
+}
+
+.boxed-view__box__view-modal {
+  width: 80%;
+  max-height: 80%;
+  overflow: scroll;
+}
+
+.boxed-view__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.upper-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower-content {
+  display: flex;
+  justify-content: stretch;
+}
+
+.lower-content__box {
+  width: 100%;
+}
+
+.graph-box {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: stretch;
+}
+
+// Source:
+//   https://stackoverflow.com/questions/28935732/how-to-stack-divs-vertically-on-mobile-but-keep-them-horizontal-on-web-version
+@media all and (max-width:800px) //800px for tablets and phones.
+{
+    .boxed-view
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: center;
+        // flex-wrap: wrap;
+        width: 100%;
+        padding: 20px 0;
+        margin: 0 auto;
+    }
+
+    .upper-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap:wrap;
+    }
+
+    .boxed-view__box {
+      width: 80%;
+      margin: 0 auto 15px auto;
+    }
+}
+

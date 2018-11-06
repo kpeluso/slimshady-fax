@@ -1,0 +1,36 @@
+.item {
+  background: $item-bg;
+  border: 1px solid $item-border;
+  margin-bottom: $space;
+  padding: $space;
+}
+
+.item__message {
+  color: $item-text-color;
+}
+
+.item__status-message {
+  color: $item-text-color;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.boxed-view__form__form-item {
+  // margin: 0 auto $space/4 auto;
+  margin-bottom: $space;
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxed-view__form__form-item-solo {
+  // margin: 0 auto $space/4 auto;
+  margin-bottom: $space;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lower {
+  margin: $space 0 0 0;
+}
+
